@@ -13,7 +13,6 @@ public class ForWhile : MonoBehaviour
         Array();
         IfElsesIfCondition();
         ComparisonOperator();
-        ArrayComparisonOperator();
     }
 
     // Update is called once per frame
@@ -50,6 +49,25 @@ public class ForWhile : MonoBehaviour
 
         rataRata = totalScore / scores.Length;
         Debug.Log("Rata-Rata : " + rataRata);
+
+        bool kualitasPlayer = false;
+        for(int i = 0; i < scores.Length; i++)
+        {
+            if (scores[i] > 80)
+            {
+                kualitasPlayer = true;
+                break;
+            }
+        }
+
+        if (kualitasPlayer)
+        {
+            Debug.Log("Pemain berkualitas tinggi");
+        }
+        else
+        {
+            Debug.Log("Pemain Butuh Latihan");
+        }
     }
 
     void IfElsesIfCondition()
@@ -82,18 +100,6 @@ public class ForWhile : MonoBehaviour
         {
             Debug.Log("Pemain Perlu Bersiap");
         } 
-    }
-    void ArrayComparisonOperator()
-    {
-        int KualitasPemain = 81;
-        if(KualitasPemain > 80)
-        {
-            Debug.Log("Pemain Berkualitas Tinggi");
-        }
-        else
-        {
-            Debug.Log("Pemain Butuh Latihan");
-        }
     }
 }
 
